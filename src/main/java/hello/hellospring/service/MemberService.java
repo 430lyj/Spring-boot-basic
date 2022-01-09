@@ -9,12 +9,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service //이걸 해줘야 스프링 컨테이너에 서비스로 등록을 하고, 컨트롤러에서 등록하고자 할 때도 바로 사용 가능
 public class MemberService {
     // test 껍데기 자동 생성 -> cmd + shift+ T
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
