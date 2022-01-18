@@ -17,7 +17,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' //template engine
 	implementation 'org.springframework.boot:spring-boot-starter-web' //web 버전으로 선택했던 사항
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	runtimeOnly 'com.h2database:h2'
 }
 

@@ -5,10 +5,12 @@ import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional //데이터 변경 혹은 추가 시에는 Transactional이 필요하니까 추가해줌. 여기서는 회원가입 기능에서만 사용되므로 회원가입 위에다가만 추가해도 됨.
 public class MemberService {
     // test 껍데기 자동 생성 -> cmd + shift+ T
     private final MemberRepository memberRepository;
@@ -20,6 +22,7 @@ public class MemberService {
     /**
      * 회원가입
      */
+
     public Long join (Member member){
         //동명의 중복회원은 회원가입 불가
         /* 자주 사용되는 내용은 메소드로 따로 뽑음 -> Ctrl + T
